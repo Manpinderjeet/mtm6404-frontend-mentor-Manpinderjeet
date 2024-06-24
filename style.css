@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+main,
+.menu-container,
+.menu ul,
+.menu ul li,
+.menu ul li span,
+.middle-container {
+    display: flex;
+}
+
+:root {
+    --AlmostWhite: hsl(0, 0%, 98%);
+    --MediumGray: hsl(0, 0%, 41%);
+    --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+
+body {
+    font-size: 18px;
+    font-family: 'Epilogue',
+        sans-serif;
+    background-color: var(--AlmostWhite);
+
+}
+
+main {
+    width: 95%;
+    height: 100vh;
+    min-width: 320px;
+
+    flex-direction: column;
+    margin: auto;
+
+}
+
+main h1 {
+    height: 0;
+    opacity: 0;
+}
+
+.menu-container {
+    align-items: center;
+    padding: 1.2rem 0rem;
+    gap: 5rem;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu {
+    height: 100%;
+}
+
+.menu ul {
+    gap: 3rem;
+    align-items: center;
+    height: 100%;
+}
+
+.menu ul li {
+    list-style: none;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu ul li:hover span svg {
+    color: var(--AlmostBlack);
+    transform: rotate(180deg);
+}
+
+.menu ul li:hover a {
+    color: var(--AlmostBlack);
+}
+
+.menu ul li:hover .features-inside li a {
+    color: var(--MediumGray);
+}
+
+.menu ul li:hover .company-inside li a {
+    color: var(--MediumGray);
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--MediumGray);
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.menu ul li div {
+    display: flex;
+    gap: .5rem;
+}
+
+.menu ul li span {
+    align-items: center;
+}
+
+.menu ul li span svg {
+    color: var(--MediumGray);
+}
+
+.login-container {
+    margin-left: auto;
+
+    height: 100%;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.login-container button {
+    outline: none;
+    border: none;
+    color: var(--MediumGray);
+    background-color: transparent;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.middle-container {
+    /* background-color: aqua; */
+    height: 80%;
+    justify-content: space-between;
+    padding: 0rem 5.5rem 0 8.5rem;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    width: 44%;
+    min-width: 554px;
+    gap: 2rem;
+
+}
+
+.head-line {
+    font-size: 5.1rem;
+    font-weight: 700;
+    color: var(--AlmostBlack);
+}
+
+.description {
+    color: var(--MediumGray);
+    line-height: 1.7rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    width: 81%;
+    word-break: keep-all;
+}
+
+.learn-more {
+    padding: 1rem 2.4rem;
+    border-radius: 10px;
+    font-family: 'Epilogue',
+        sans-serif;
+    outline: none;
+    background-color: var(--AlmostBlack);
+    color: var(--AlmostWhite);
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.learn-more:hover {
+    background-color: var(--AlmostWhite);
+    color: var(--AlmostBlack);
+
+}
+
+.aside-img {
+    width: 40%;
+    background-image: url("./images/image-hero-desktop.png");
+    background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.menu-container h2,
+.aside-img h2,
+.middle-container>h2 {
+    display: none;
+}
+
+.aside-img img {
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+}
+
+
+.mark {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+
+.nav-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-icon,
+.close-icon {
+    display: none;
+}
+
+/* JS.... */
+
+.login-toggle {
+    border: 2px solid var(--MediumGray) !important;
+}
+
+
+/* dropdown.... */
+
+
+.features-inside,
+.company-inside {
+    background-color: var(--AlmostWhite);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem !important;
+    border-radius: 10px;
+    height: auto !important;
+    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, .1);
+}
+
+.company-inside {
+    width: 130px;
+}
+
+.features-inside li,
+.company-inside li {
+    width: 100%;
+}
+
+.features-inside li a,
+.company-inside li a {
+    font-weight: 500 !important;
+    font-size: .8rem !important;
+}
+
+
+.features-inside li:hover a {
+    color: var(--AlmostBlack) !important;
+}
+
+.company-inside li:hover a {
+    color: var(--AlmostBlack) !important;
+}
+
+
+.features .dropdown,
+.company .dropdown {
+
+    position: absolute;
+    padding-top: 2rem;
+    height: 0;
+    max-height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height .5s ease;
+    visibility: hidden;
+}
+
+.features .dropdown {
+    top: 10px;
+    left: -70px;
+
+}
+
+.company .dropdown {
+    top: 10px;
+    left: 0px;
+
+}
+
+
+.features:hover .dropdown {
+    height: 175px;
+    visibility: visible;
+}
+
+.company:hover .dropdown {
+    height: 140px;
+    visibility: visible;
+}
+
+.close-icon,
+.hamburger-icon,
+button {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1235px) {
+    .middle-container {
+        padding: 0rem;
+    }
+
+    .s {
+        padding: 0rem 5.5rem 0 8.5rem;
+    }
+}
+
+
+@media screen and (max-width:980px) {
+
+    html {
+        font-size: .9rem;
+    }
+    .middle-container {
+        padding: 0rem;
+        flex-direction: column-reverse;
+        padding: 0rem 5.5rem 0 8.5rem;
+        height: auto;
+
+        gap: 1rem;
+    }
+
+    .information {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        min-width: auto;
+        margin-top: .8rem;
+    }
+
+    .head-line {
+        font-size: 2.5rem;
+    }
+
+    .aside-img {
+
+        width: 100%;
+        height: 250px;
+        background-image: url("./images/image-hero-mobile.png");
+    }
+
+    .learn-more {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    .effect-class {
+        opacity: 0;
+        transition: opacity .5s ease;
+    }
+
+    .effect {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        content: "";
+        opacity: 1;
+        position: absolute;
+        top: 0;
+
+    }
+
+    .hamburger-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        background-color: var(--AlmostWhite);
+        flex-direction: column;
+        position: fixed;
+        width: 30%;
+        height: 100%;
+        top: 0;
+        right: -240px;
+        padding: 1.5rem;
+        min-width: 238px;
+        transition: right .5s ease;
+        z-index: 1;
+    }
+
+
+    .menu {
+        width: 100%;
+        height: auto;
+        margin-top: 1.5rem;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 1.7rem;
+    }
+
+    .menu ul li a {
+        font-size: 1.2rem;
+    }
+
+    .login-container {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .login-container button {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .close-icon {
+        display: block;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .features,
+    .company {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .features div,
+    .company div {
+        width: 100%;
+    }
+
+    .features .dropdown,
+    .company .dropdown {
+        position: static;
+        width: 100%;
+        border-radius: 0;
+        padding-top: 1rem;
+    }
+
+    .features-inside,
+    .company-inside {
+        border-radius: 0;
+        gap: 2rem !important;
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .features-inside li a,
+    .company-inside li a {
+        font-size: 1.1rem !important;
+    }
+
+    .menu ul li {
+        position: static;
+    }
+
+    .features:hover .dropdown {
+        height: 210px;
+    }
+
+    .company:hover .dropdown {
+        height: 165px;
+    }
+
+
+
+}
+
+@media screen and (max-width:839px) {
+    .middle-container {
+        padding: 0;
+    }
+
+
+}
+
+@media screen and (max-width:625px) {
+    html {
+        font-size: .7rem;
+    }
+
+
+    .head-line {
+        font-size: 2rem;
+    }
+
+    .information {
+        margin-top: 3rem;
+    }
+
+
+    main {
+        width: 100%;
+        padding: 0rem 1rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .mark svg path {
+        transform: scale(.6);
+    }
+
+}
